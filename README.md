@@ -1,16 +1,19 @@
-## Hi there 👋
+# Montoya Web Studio
 
-<!--
-**MontoyaWebStudio/montoyawebstudio** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Design and development of modern, professional and responsive websites for brands, businesses and entrepreneurs.
 
-Here are some ideas to get you started:
+## What I do
+- Responsive websites
+- Landing pages
+- Portfolio websites
+- Business websites
+- Website redesign
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Featured projects
+- MOD
+- Innovasmart
+
+## Contact
+- Email: montoyawebstudio@gmail.com
+- Instagram: @montoyawebstudio
+- Tel: +549 011 5632-3161
