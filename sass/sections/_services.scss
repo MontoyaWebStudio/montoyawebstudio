@@ -1,0 +1,34 @@
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.services-grid {
+  align-items: stretch;
+}
+
+.service-card__index {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 1.1rem;
+  border-radius: 50%;
+  color: var(--color-primary);
+  background-color: rgba(164, 186, 181, 0.18);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.04em;
+}
+
+.service-card__title {
+  max-width: 14ch;
+}
+
+.service-card__text {
+  max-width: 34ch;
+}
+
+@media (max-width: 767.98px) {
+  .service-card__title,
+  .service-card__text {
+    max-width: 100%;
+  }
+}

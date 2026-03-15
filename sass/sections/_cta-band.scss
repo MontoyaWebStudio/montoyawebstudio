@@ -1,0 +1,61 @@
+/* =========================================================
+   CTA BAND
+========================================================= */
+
+.cta-band {
+  padding: clamp(1.25rem, 2vw, 1.75rem);
+  border: 1px solid rgba(87, 115, 95, 0.16);
+  border-radius: var(--radius-xl);
+  background:
+    linear-gradient(135deg, rgba(164, 186, 181, 0.18), rgba(143, 168, 179, 0.1)),
+    var(--color-surface);
+  box-shadow: var(--shadow-md);
+}
+
+.cta-band__copy {
+  max-width: 40rem;
+}
+
+.cta-band__eyebrow {
+  display: inline-block;
+  margin-bottom: 0.65rem;
+  color: var(--color-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cta-band__title {
+  margin-bottom: 0.75rem;
+  max-width: 16ch;
+}
+
+.cta-band__text {
+  max-width: 48ch;
+  color: var(--color-text-soft);
+}
+
+.cta-band__actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media (max-width: 991.98px) {
+  .cta-band__copy,
+  .cta-band__title,
+  .cta-band__text {
+    max-width: 100%;
+  }
+
+  .cta-band__actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .cta-band {
+    padding: 1.15rem;
+  }
+}

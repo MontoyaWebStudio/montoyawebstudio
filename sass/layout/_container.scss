@@ -1,0 +1,14 @@
+/* =========================================================
+   CONTAINER
+   Ajustes globales del container
+========================================================= */
+
+.container {
+  width: min(100% - 2rem, var(--container-max));
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: min(100% - 3rem, var(--container-max));
+  }
+}

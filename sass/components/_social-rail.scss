@@ -1,0 +1,92 @@
+/* =========================================================
+   SOCIAL RAIL
+   Barra flotante izquierda
+========================================================= */
+
+.social-rail {
+  position: fixed;
+  left: 0.75rem;
+  bottom: 1.25rem;
+  z-index: var(--z-floating);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: flex-start;
+}
+
+.social-rail__link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  min-width: 3rem;
+  height: 3rem;
+  padding: 0 0.9rem;
+  color: var(--color-white);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition:
+    min-width var(--transition-base),
+    transform var(--transition-base),
+    background-color var(--transition-base),
+    box-shadow var(--transition-base),
+    opacity var(--transition-base);
+}
+
+.social-rail__link:hover,
+.social-rail__link:focus-visible {
+  min-width: 8rem;
+  color: var(--color-white);
+  box-shadow: var(--shadow-md);
+}
+
+.social-rail__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.social-rail__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.social-rail__label {
+  font-size: 0.82rem;
+  font-weight: var(--font-weight-semibold);
+  line-height: 1;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition:
+    opacity var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.social-rail__link:hover .social-rail__label,
+.social-rail__link:focus-visible .social-rail__label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.social-rail__link--instagram {
+  background: linear-gradient(135deg, #7d768a, #8f88a3, #a4bab5);
+}
+
+.social-rail__link--github {
+  background-color: var(--color-heading);
+}
+
+.social-rail__link--email {
+  background-color: var(--color-primary);
+}
+
+@media (max-width: 1399.98px) {
+  .social-rail {
+    display: none;
+  }
+}

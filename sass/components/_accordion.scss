@@ -1,0 +1,59 @@
+/* =========================================================
+   ACCORDION
+   FAQ / Bootstrap override suave
+========================================================= */
+
+.faq-accordion {
+  display: grid;
+  gap: 1rem;
+}
+
+.faq-accordion__item {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl) !important;
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.faq-accordion__button {
+  padding: 1.2rem 1.25rem;
+  color: var(--color-heading);
+  font-weight: var(--font-weight-semibold);
+  background-color: var(--color-surface);
+  box-shadow: none !important;
+}
+
+.faq-accordion__button:not(.collapsed) {
+  color: var(--color-heading);
+  background-color: rgba(164, 186, 181, 0.12);
+}
+
+.faq-accordion__button:focus {
+  box-shadow: none;
+}
+
+.faq-accordion__button:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: -2px;
+}
+
+.faq-accordion__button::after {
+  filter: saturate(0.4);
+}
+
+.faq-accordion__body {
+  padding: 0 1.25rem 1.25rem;
+  color: var(--color-text-soft);
+  line-height: var(--line-height-relaxed);
+}
+
+@media (max-width: 767.98px) {
+  .faq-accordion__button {
+    padding: 1rem 1rem;
+  }
+
+  .faq-accordion__body {
+    padding: 0 1rem 1rem;
+  }
+}

@@ -1,0 +1,47 @@
+/* =========================================================
+   TRUST STRIP
+========================================================= */
+
+.trust-strip {
+  align-items: stretch;
+}
+
+.trust-pill {
+  height: 100%;
+  padding: 1.2rem 1.15rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  background:
+    linear-gradient(180deg, rgba(164, 186, 181, 0.12), rgba(255, 255, 255, 0.92));
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.trust-pill:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-border-strong);
+}
+
+.trust-pill__title {
+  margin-bottom: 0.45rem;
+  color: var(--color-heading);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-snug);
+}
+
+.trust-pill__text {
+  color: var(--color-text-soft);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+}
+
+@media (max-width: 767.98px) {
+  .trust-pill {
+    padding: 1rem;
+  }
+}

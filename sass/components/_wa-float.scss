@@ -1,0 +1,52 @@
+/* =========================================================
+   WA FLOAT
+   Botón flotante de WhatsApp
+========================================================= */
+
+.wa-float {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: var(--z-floating);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.9rem;
+  height: 3.9rem;
+  color: var(--color-white);
+  background: linear-gradient(135deg, #6f9389, #57735f);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 50%;
+  box-shadow: var(--shadow-md);
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base),
+    background-color var(--transition-base);
+}
+
+.wa-float:hover,
+.wa-float:focus-visible {
+  color: var(--color-white);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: var(--shadow-lg);
+  background: linear-gradient(135deg, #57735f, #49624f);
+}
+
+.wa-float__icon {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+@media (max-width: 767.98px) {
+  .wa-float {
+    right: 1rem;
+    bottom: 1rem;
+    width: 3.6rem;
+    height: 3.6rem;
+  }
+
+  .wa-float__icon {
+    width: 1.45rem;
+    height: 1.45rem;
+  }
+}

@@ -1,0 +1,17 @@
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq-section__grid {
+  align-items: start;
+}
+
+.faq-section .section-heading {
+  margin-bottom: 0;
+}
+
+@media (max-width: 991.98px) {
+  .faq-section .section-heading {
+    margin-bottom: 2rem;
+  }
+}

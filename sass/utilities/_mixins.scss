@@ -1,0 +1,103 @@
+@use "breakpoints" as *;
+
+/* =========================================================
+   MIXINS
+   Helpers reutilizables para responsive y UI
+========================================================= */
+
+/* =========================
+   MEDIA QUERIES
+========================= */
+@mixin up($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: $bp-sm) { @content; }
+  } @else if $breakpoint == md {
+    @media (min-width: $bp-md) { @content; }
+  } @else if $breakpoint == lg {
+    @media (min-width: $bp-lg) { @content; }
+  } @else if $breakpoint == xl {
+    @media (min-width: $bp-xl) { @content; }
+  } @else if $breakpoint == xxl {
+    @media (min-width: $bp-xxl) { @content; }
+  }
+}
+
+@mixin down($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: 575.98px) { @content; }
+  } @else if $breakpoint == md {
+    @media (max-width: 767.98px) { @content; }
+  } @else if $breakpoint == lg {
+    @media (max-width: 991.98px) { @content; }
+  } @else if $breakpoint == xl {
+    @media (max-width: 1199.98px) { @content; }
+  } @else if $breakpoint == xxl {
+    @media (max-width: 1399.98px) { @content; }
+  }
+}
+
+@mixin between($min, $max) {
+  @if $min == sm and $max == md {
+    @media (min-width: $bp-sm) and (max-width: 767.98px) { @content; }
+  } @else if $min == md and $max == lg {
+    @media (min-width: $bp-md) and (max-width: 991.98px) { @content; }
+  } @else if $min == lg and $max == xl {
+    @media (min-width: $bp-lg) and (max-width: 1199.98px) { @content; }
+  } @else if $min == xl and $max == xxl {
+    @media (min-width: $bp-xl) and (max-width: 1399.98px) { @content; }
+  }
+}
+
+/* =========================
+   INTERACTION
+========================= */
+@mixin hover-focus {
+  &:hover,
+  &:focus-visible {
+    @content;
+  }
+}
+
+@mixin focus-ring($color: var(--color-secondary), $offset: 3px) {
+  outline: 2px solid $color;
+  outline-offset: $offset;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+@mixin flex-center($gap: 0) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $gap;
+}
+
+@mixin flex-between($gap: 0) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $gap;
+}
+
+/* =========================
+   TEXT
+========================= */
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* =========================
+   SURFACES
+========================= */
+@mixin glass-surface(
+  $bg: rgba(255, 255, 255, 0.72),
+  $border: 1px solid rgba(255, 255, 255, 0.18)
+) {
+  background: $bg;
+  border: $border;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}

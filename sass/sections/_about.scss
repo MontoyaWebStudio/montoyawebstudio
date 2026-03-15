@@ -1,0 +1,42 @@
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about-section__grid {
+  align-items: center;
+}
+
+.about-media {
+  position: relative;
+}
+
+.about-media__image {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  object-fit: cover;
+  box-shadow: var(--shadow-md);
+  background-color: var(--color-surface);
+}
+
+.about-copy {
+  max-width: 38rem;
+}
+
+.about-copy__text + .about-copy__text {
+  margin-top: 1rem;
+}
+
+.about-copy__list {
+  margin-top: 1.5rem;
+  color: var(--color-text-soft);
+}
+
+.about-copy__list li::marker {
+  color: var(--color-secondary);
+}
+
+@media (max-width: 991.98px) {
+  .about-copy {
+    max-width: 100%;
+  }
+}

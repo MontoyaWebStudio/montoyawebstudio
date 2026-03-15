@@ -1,0 +1,43 @@
+/* =========================================================
+   PROJECTS
+========================================================= */
+
+.projects-grid {
+  align-items: stretch;
+}
+
+.project-card__tag {
+  color: var(--color-secondary);
+}
+
+.project-card__title {
+  max-width: 14ch;
+}
+
+.project-card__text {
+  max-width: 34ch;
+}
+
+.project-card__link {
+  width: fit-content;
+}
+
+.project-card__link--disabled {
+  opacity: 0.72;
+}
+
+.projects-carousel-wrap {
+  position: relative;
+}
+
+.projects-carousel {
+  background:
+    linear-gradient(180deg, rgba(164, 186, 181, 0.08), rgba(255, 255, 255, 1));
+}
+
+@media (max-width: 767.98px) {
+  .project-card__title,
+  .project-card__text {
+    max-width: 100%;
+  }
+}

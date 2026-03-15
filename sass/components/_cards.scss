@@ -1,0 +1,167 @@
+/* =========================================================
+   CARDS
+   Base visual compartida
+========================================================= */
+
+.service-card,
+.benefit-card,
+.project-card,
+.plan-card,
+.process-card,
+.contact-direct {
+  position: relative;
+  height: 100%;
+  border: 1px solid rgba(67, 65, 92, 0.12);
+  border-radius: var(--radius-xl);
+  background-color: var(--color-surface);
+  box-shadow: 0 10px 28px rgba(67, 65, 92, 0.045);
+  overflow: hidden;
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base),
+    border-color var(--transition-base),
+    background-color var(--transition-base);
+}
+
+.service-card::before,
+.benefit-card::before,
+.project-card::before,
+.plan-card::before,
+.process-card::before,
+.contact-direct::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent-mint), var(--color-secondary));
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.service-card:hover,
+.benefit-card:hover,
+.project-card:hover,
+.plan-card:hover,
+.process-card:hover,
+.contact-direct:hover {
+  transform: translateY(-6px);
+  border-color: rgba(67, 65, 92, 0.2);
+  box-shadow: 0 20px 44px rgba(67, 65, 92, 0.09);
+}
+
+.service-card:hover::before,
+.benefit-card:hover::before,
+.project-card:hover::before,
+.plan-card:hover::before,
+.process-card:hover::before,
+.contact-direct:hover::before {
+  opacity: 1;
+}
+
+.service-card__body,
+.benefit-card__body,
+.project-card__body,
+.plan-card__body,
+.process-card__body,
+.contact-direct__body {
+  padding: clamp(1.25rem, 2vw, 1.75rem);
+}
+
+.service-card__title,
+.benefit-card__title,
+.project-card__title,
+.plan-card__title,
+.process-card__title,
+.contact-direct__title {
+  margin-bottom: 0.75rem;
+}
+
+.service-card__text,
+.benefit-card__text,
+.project-card__text,
+.plan-card__text,
+.process-card__text,
+.contact-direct__text {
+  color: var(--color-text-soft);
+}
+
+.service-card__index,
+.process-card__step,
+.project-card__tag,
+.plan-card__eyebrow,
+.contact-direct__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  color: var(--color-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.project-card__image {
+  aspect-ratio: 16 / 11;
+  object-fit: cover;
+}
+
+.project-card__link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 1rem;
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.project-card__link:hover,
+.project-card__link:focus-visible {
+  color: var(--color-primary-hover);
+}
+
+.project-card__link--disabled {
+  color: var(--color-muted);
+  cursor: default;
+}
+
+.plan-card__list,
+.about-copy__list,
+.contact-cta__list,
+.contact-direct__list {
+  display: grid;
+  gap: 0.65rem;
+  margin-top: 1rem;
+  padding-left: 1.1rem;
+}
+
+.plan-card--featured {
+  border-color: rgba(87, 115, 95, 0.26);
+  background:
+    linear-gradient(180deg, rgba(164, 186, 181, 0.14), rgba(255, 255, 255, 1));
+  box-shadow: 0 20px 44px rgba(67, 65, 92, 0.09);
+  transform: translateY(-6px);
+}
+
+.plan-card--featured::before {
+  opacity: 1;
+}
+
+.plan-card--featured:hover {
+  transform: translateY(-8px);
+  border-color: rgba(87, 115, 95, 0.38);
+}
+
+@media (max-width: 767.98px) {
+  .service-card__body,
+  .benefit-card__body,
+  .project-card__body,
+  .plan-card__body,
+  .process-card__body,
+  .contact-direct__body {
+    padding: 1.25rem;
+  }
+
+  .plan-card--featured {
+    transform: none;
+  }
+}

@@ -1,0 +1,24 @@
+/* =========================================================
+   SECTION BLOCK
+   Espaciado vertical general de secciones
+========================================================= */
+
+.section-block {
+  padding-block: clamp(2.75rem, 4.5vw, 4.25rem);
+}
+
+.trust-strip-section,
+.cta-band-section {
+  padding-block: clamp(1.25rem, 2vw, 1.85rem);
+}
+
+@media (max-width: 767.98px) {
+  .section-block {
+    padding-block: clamp(2.35rem, 6vw, 3.25rem);
+  }
+
+  .trust-strip-section,
+  .cta-band-section {
+    padding-block: clamp(1rem, 4vw, 1.5rem);
+  }
+}

@@ -1,0 +1,125 @@
+@use "../utilities/variables" as *;
+
+/* =========================================================
+   ROOT
+   Variables CSS globales del sistema visual
+========================================================= */
+
+:root {
+  /* =========================
+     COLORS
+  ========================= */
+  --color-bg: #{$color-bg};
+  --color-surface: #{$color-surface};
+  --color-surface-soft: #{$color-surface-soft};
+  --color-surface-alt: #{$color-surface-alt};
+
+  --color-text: #{$color-text};
+  --color-heading: #{$color-heading};
+  --color-text-soft: #{$color-text-soft};
+  --color-muted: #{$color-muted};
+
+  --color-primary: #{$color-primary};
+  --color-primary-hover: #{$color-primary-hover};
+  --color-primary-soft: #{$color-primary-soft};
+
+  --color-secondary: #{$color-secondary};
+  --color-secondary-hover: #{$color-secondary-hover};
+  --color-secondary-soft: #{$color-secondary-soft};
+
+  --color-accent-blue: #{$color-accent-blue};
+  --color-accent-mint: #{$color-accent-mint};
+  --color-accent-warm: #{$color-accent-warm};
+
+  --color-border: #{$color-border};
+  --color-border-strong: #{$color-border-strong};
+
+  --color-shadow: #{$color-shadow};
+  --color-shadow-strong: #{$color-shadow-strong};
+
+  --color-overlay: #{$color-overlay};
+
+  --color-white: #{$color-white};
+  --color-black: #{$color-black};
+  --color-success: #{$color-success};
+
+  /* =========================
+     TYPOGRAPHY
+  ========================= */
+  --font-primary: #{$font-primary};
+  --font-heading: #{$font-heading};
+
+  --font-size-xs: #{$font-size-xs};
+  --font-size-sm: #{$font-size-sm};
+  --font-size-base: #{$font-size-base};
+  --font-size-md: #{$font-size-md};
+  --font-size-lg: #{$font-size-lg};
+  --font-size-xl: #{$font-size-xl};
+  --font-size-2xl: #{$font-size-2xl};
+  --font-size-3xl: #{$font-size-3xl};
+  --font-size-4xl: #{$font-size-4xl};
+
+  --line-height-tight: #{$line-height-tight};
+  --line-height-snug: #{$line-height-snug};
+  --line-height-base: #{$line-height-base};
+  --line-height-relaxed: #{$line-height-relaxed};
+
+  --font-weight-regular: #{$font-weight-regular};
+  --font-weight-medium: #{$font-weight-medium};
+  --font-weight-semibold: #{$font-weight-semibold};
+  --font-weight-bold: #{$font-weight-bold};
+
+  /* =========================
+     SPACING
+  ========================= */
+  --space-2xs: #{$space-2xs};
+  --space-xs: #{$space-xs};
+  --space-sm: #{$space-sm};
+  --space-md: #{$space-md};
+  --space-lg: #{$space-lg};
+  --space-xl: #{$space-xl};
+  --space-2xl: #{$space-2xl};
+  --space-3xl: #{$space-3xl};
+  --space-4xl: #{$space-4xl};
+  --space-5xl: #{$space-5xl};
+
+  /* =========================
+     RADIUS
+  ========================= */
+  --radius-sm: #{$radius-sm};
+  --radius-md: #{$radius-md};
+  --radius-lg: #{$radius-lg};
+  --radius-xl: #{$radius-xl};
+  --radius-pill: #{$radius-pill};
+
+  /* =========================
+     SHADOWS
+  ========================= */
+  --shadow-sm: #{$shadow-sm};
+  --shadow-md: #{$shadow-md};
+  --shadow-lg: #{$shadow-lg};
+
+  /* =========================
+     TRANSITIONS
+  ========================= */
+  --transition-fast: #{$transition-fast};
+  --transition-base: #{$transition-base};
+  --transition-slow: #{$transition-slow};
+
+  /* =========================
+     LAYOUT
+  ========================= */
+  --container-max: #{$container-max};
+  --header-height: #{$header-height};
+  --section-padding-y: #{$section-padding-y};
+
+  /* =========================
+     Z-INDEX
+  ========================= */
+  --z-base: #{$z-base};
+  --z-dropdown: #{$z-dropdown};
+  --z-sticky: #{$z-sticky};
+  --z-overlay: #{$z-overlay};
+  --z-floating: #{$z-floating};
+  --z-modal: #{$z-modal};
+}

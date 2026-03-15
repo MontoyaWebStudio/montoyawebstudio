@@ -1,0 +1,45 @@
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.section-heading {
+  max-width: 54rem;
+  margin-bottom: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.section-heading__eyebrow {
+  display: inline-block;
+  margin-bottom: 0.85rem;
+  color: var(--color-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section-heading__title {
+  margin-bottom: 1rem;
+  max-width: 16ch;
+}
+
+.section-heading__text {
+  max-width: 56ch;
+  color: var(--color-text-soft);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-relaxed);
+}
+
+@media (max-width: 767.98px) {
+  .section-heading {
+    margin-bottom: 1.75rem;
+  }
+
+  .section-heading__title,
+  .section-heading__text {
+    max-width: 100%;
+  }
+
+  .section-heading__text {
+    font-size: var(--font-size-base);
+  }
+}
