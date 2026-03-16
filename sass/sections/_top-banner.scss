@@ -1,0 +1,287 @@
+/* =========================================================
+   TOP BANNER
+   Versiones premium para probar arriba del hero
+========================================================= */
+
+.top-banner {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.top-banner__container {
+  position: relative;
+}
+
+.top-banner__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.top-banner__eyebrow {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  color: var(--color-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.top-banner__title {
+  margin: 0;
+  color: var(--color-heading);
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+}
+
+.top-banner__text {
+  color: var(--color-text-soft);
+  line-height: var(--line-height-relaxed);
+}
+
+.top-banner__blur,
+.top-banner__glow,
+.top-banner__line {
+  position: absolute;
+  pointer-events: none;
+}
+
+/* =========================================================
+   VERSION 1
+   Editorial soft premium
+========================================================= */
+
+.top-banner--v1 {
+  padding-block: clamp(1.6rem, 3vw, 2.6rem);
+  border-bottom: 1px solid rgba(67, 65, 92, 0.08);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.95)),
+    linear-gradient(
+      135deg,
+      rgba(164, 186, 181, 0.14) 0%,
+      rgba(143, 168, 179, 0.1) 45%,
+      rgba(125, 118, 138, 0.12) 100%
+    );
+  transition:
+    background var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.top-banner--v1 .top-banner__inner {
+  max-width: 64rem;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.top-banner--v1 .top-banner__title {
+  max-width: 18ch;
+  margin-inline: auto;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+}
+
+.top-banner--v1 .top-banner__text {
+  max-width: 58ch;
+  margin: 0.85rem auto 0;
+  font-size: clamp(1rem, 1.2vw, 1.08rem);
+}
+
+.top-banner--v1 .top-banner__blur {
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.62;
+  transition:
+    transform var(--transition-slow),
+    opacity var(--transition-base);
+}
+
+.top-banner--v1 .top-banner__blur--one {
+  top: -3rem;
+  left: 8%;
+  width: 13rem;
+  height: 13rem;
+  background-color: rgba(164, 186, 181, 0.38);
+}
+
+.top-banner--v1 .top-banner__blur--two {
+  right: 10%;
+  bottom: -3rem;
+  width: 14rem;
+  height: 14rem;
+  background-color: rgba(125, 118, 138, 0.22);
+}
+
+.top-banner--v1 .top-banner__blur--three {
+  top: 18%;
+  left: 50%;
+  width: 10rem;
+  height: 10rem;
+  background-color: rgba(143, 168, 179, 0.16);
+  transform: translateX(-50%);
+}
+
+.top-banner--v1:hover .top-banner__blur--one {
+  transform: translate3d(8px, -6px, 0) scale(1.04);
+}
+
+.top-banner--v1:hover .top-banner__blur--two {
+  transform: translate3d(-10px, 6px, 0) scale(1.05);
+}
+
+.top-banner--v1:hover .top-banner__blur--three {
+  transform: translateX(-50%) scale(1.06);
+}
+
+/* =========================================================
+   VERSION 2
+   Ribbon premium más visual
+========================================================= */
+
+.top-banner--v2 {
+  padding-block: clamp(1.25rem, 2.4vw, 2rem);
+  border-bottom: 1px solid rgba(67, 65, 92, 0.08);
+  background:
+    radial-gradient(circle at 15% 25%, rgba(164, 186, 181, 0.22), transparent 35%),
+    radial-gradient(circle at 85% 30%, rgba(125, 118, 138, 0.18), transparent 34%),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.88) 0%,
+      rgba(245, 242, 238, 0.96) 50%,
+      rgba(255, 255, 255, 0.88) 100%
+    );
+  transition:
+    background var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.top-banner--v2 .top-banner__inner {
+  max-width: 72rem;
+  margin-inline: auto;
+  text-align: center;
+  padding: clamp(1rem, 2vw, 1.4rem) clamp(1rem, 2vw, 1.5rem);
+  border: 1px solid rgba(67, 65, 92, 0.08);
+  border-radius: calc(var(--radius-xl) + 0.25rem);
+  background: rgba(255, 255, 255, 0.52);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 16px 38px rgba(67, 65, 92, 0.05);
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.top-banner--v2 .top-banner__title {
+  max-width: 22ch;
+  margin-inline: auto;
+  font-size: clamp(1.75rem, 3vw, 2.85rem);
+}
+
+.top-banner--v2 .top-banner__text {
+  max-width: 54ch;
+  margin: 0.75rem auto 0;
+  font-size: 1rem;
+}
+
+.top-banner--v2 .top-banner__line {
+  left: 50%;
+  bottom: 0;
+  width: min(100%, 18rem);
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    rgba(164, 186, 181, 0),
+    rgba(164, 186, 181, 0.9),
+    rgba(125, 118, 138, 0.9),
+    rgba(164, 186, 181, 0)
+  );
+  transform: translateX(-50%);
+  transition:
+    width var(--transition-base),
+    opacity var(--transition-base);
+}
+
+.top-banner--v2 .top-banner__glow {
+  z-index: 0;
+  inset: auto;
+  left: 50%;
+  top: 50%;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(143, 168, 179, 0.14) 0%,
+    rgba(143, 168, 179, 0.06) 35%,
+    transparent 70%
+  );
+  transform: translate(-50%, -50%);
+  filter: blur(18px);
+  transition:
+    transform var(--transition-slow),
+    opacity var(--transition-base);
+}
+
+.top-banner--v2:hover .top-banner__inner {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 42px rgba(67, 65, 92, 0.08);
+  border-color: rgba(67, 65, 92, 0.12);
+}
+
+.top-banner--v2:hover .top-banner__line {
+  width: min(100%, 22rem);
+}
+
+.top-banner--v2:hover .top-banner__glow {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 767.98px) {
+  .top-banner--v1,
+  .top-banner--v2 {
+    padding-block: 1.25rem 1.5rem;
+  }
+
+  .top-banner--v1 .top-banner__title,
+  .top-banner--v1 .top-banner__text,
+  .top-banner--v2 .top-banner__title,
+  .top-banner--v2 .top-banner__text {
+    max-width: 100%;
+  }
+
+  .top-banner--v1 .top-banner__blur--one {
+    left: -6%;
+    width: 9rem;
+    height: 9rem;
+  }
+
+  .top-banner--v1 .top-banner__blur--two {
+    right: -8%;
+    width: 9rem;
+    height: 9rem;
+  }
+
+  .top-banner--v1 .top-banner__blur--three {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .top-banner--v2 .top-banner__inner {
+    padding: 1rem;
+  }
+
+  .top-banner--v2 .top-banner__line {
+    width: min(100%, 10rem);
+  }
+
+  .top-banner--v2 .top-banner__glow {
+    width: 11rem;
+    height: 11rem;
+  }
+}
